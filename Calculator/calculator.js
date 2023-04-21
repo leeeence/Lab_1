@@ -34,11 +34,16 @@ function calculate() {
 		alert("Некорретный ввод")
 		return
 	}
-
-	if (isNaN(depositAmount)){
-		alert("Укажите число")
+	if (depositAmount < 0)
+		alert("Укажите положительное число")
 		return
 	}
+
+	if (isNaN(depositAmount)){
+		alert("Укажите положительное число")
+		return
+	}
+	
 
 	let interestRate;
 	let totalAmount;
